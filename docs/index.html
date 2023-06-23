@@ -14,16 +14,9 @@
     <br> 
 　　<br>
     <br>
-    <!--
-    Author: <b>Yuki Okamoto<sup>1</sup>, Shota Horiguchi<sup>2</sup>, Masaaki Yamamoto<sup>2</sup>, Keisuke Imoto<sup>3</sup>, Yohei Kawaguchi<sup>2</sup></b><br>
-    Affiliation: <sup>1 </sup>Ritsumeikan University, <sup>2 </sup>Hitachi, Ltd., <sup>3 </sup>Doshisha University
-    <br>
-    <br>
-    <br>
--->
     <p>
     This is a demonstration of environmental sound conversion from vocal imitations.
-    We conducted environmental sound conversion using two proposed method and one comparison methods as follows:
+    We conducted environmental sound conversion using two proposed methods, one comparison method, and ground truth as follows:
     </p>
     <ul>
   　<li><b>Reconstructed sound</b></li>
@@ -40,33 +33,6 @@
     <li><b>Synthesis method using vocal imitations and sound event labels (Vocal and label) <font color="#0000ff">(Proposed)</font></b></li>
         This method is uses a vocal imitations and sound event labels as an input.
 　　</ul>
-<!--
-    <p>
-    As sounds of the dataset, we used RWCP-SSD (Real World Computing Partnership-sound Scene Database) [1].
-    Some sound events in RWCP-SSD are labeled in the “event entry + ID” format, e.g., whistle1 and whistle2.
-    We created hierarchical sound-event classes by grouping labels with the same event entry, e.g., whistle.
-    We first selected 44 sound events from RWCP-SSD, which we call subclasses, and grouped them into 16 superclasses.
-    For the onomatopoeic words corresponding to each sound sample, we used the dataset in RWCP-SSD-Onomatopoeia [2].
-    <br>
-    We conducted the following three evaluation datasets using the selected sound events:
-    <ul>
-  　<li><b>(I) Inter-superclass dataset (<a href="#data01">samples of extracted sounds</a>)</b></li>
-        Each mixture sound in this dataset is composed of a target sound and interference sounds, the superclass of each is different from that of the target sound.
-        <br> 
-
-  　<li><b>(II) Intra-superclass dataset (<a href="#data02">samples of extracted sounds</a>)</b></li>
-        Each mixture sound in this dataset is composed of a target sound and interference sounds, the superclass of each is the same as that of the target sound, but the subclass is different.
-        <br><br>
-
-    <li><b>(III) Intra-subclass dataset (<a href="#data03">samples of extracted sounds</a>)</b></li>
-        Each mixture sound in this dataset is composed of a target sound and interference sounds, the subclass of each is the same as that of the target sound, but the onomatopoeic word is different. 
-　　</ul>
-    </p>
-    <br>
-    <br>
-    <br><br><br>
-    <p>
-    -->
     <br><br>
     <a name="data01"><font size="6">Examples of synthesized sounds</font></a><br><br>
     <table border="1", align="left", style="margin-bottom:70px">

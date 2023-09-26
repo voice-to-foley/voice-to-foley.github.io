@@ -1,0 +1,306 @@
+<HTML>
+  <HEAD>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <TITLE>Environmental sound synthesis from vocal imitations and sound event labels</TITLE>  
+  <meta http-equiv="content-type"  charset="utf-8" name="robots" value="noindex" />
+  </HEAD>
+  <BODY>
+
+<dir id="test"></dir>
+    <left>
+     <br>
+     <font size="6"><b>Environmental sound synthesis from vocal imitations and sound event labels</b></font>
+
+    <br> 
+　　<br>
+    <br>
+    <!--
+    Author: <b>Yuki Okamoto<sup>1</sup>, Shota Horiguchi<sup>2</sup>, Masaaki Yamamoto<sup>2</sup>, Keisuke Imoto<sup>3</sup>, Yohei Kawaguchi<sup>2</sup></b><br>
+    Affiliation: <sup>1 </sup>Ritsumeikan University, <sup>2 </sup>Hitachi, Ltd., <sup>3 </sup>Doshisha University
+    <br>
+    <br>
+    <br>
+-->
+    <p>
+    This is a demonstration of environmental sound synthesis from vocal imitations and sound event labels.
+    We conducted environmental sound conversion using two proposed method and one comparison methods as follows:
+    </p>
+    <ul>
+  　<li><b>Synthesis method using sound event labels (Label) (Baseline)</b></li>
+        This method is uses a sound event labels as an input.
+        <br><br>
+
+    <li><b>Synthesis method using vocal imitations and sound event labels (Label and vocal) <font color="#0000ff">(Proposed)</font></b></li>
+        This method is uses a vocal imitations and sound event labels as an input.
+　　</ul>
+<!--
+    <p>
+    As sounds of the dataset, we used RWCP-SSD (Real World Computing Partnership-sound Scene Database) [1].
+    Some sound events in RWCP-SSD are labeled in the “event entry + ID” format, e.g., whistle1 and whistle2.
+    We created hierarchical sound-event classes by grouping labels with the same event entry, e.g., whistle.
+    We first selected 44 sound events from RWCP-SSD, which we call subclasses, and grouped them into 16 superclasses.
+    For the onomatopoeic words corresponding to each sound sample, we used the dataset in RWCP-SSD-Onomatopoeia [2].
+    <br>
+    We conducted the following three evaluation datasets using the selected sound events:
+    <ul>
+  　<li><b>(I) Inter-superclass dataset (<a href="#data01">samples of extracted sounds</a>)</b></li>
+        Each mixture sound in this dataset is composed of a target sound and interference sounds, the superclass of each is different from that of the target sound.
+        <br> 
+
+  　<li><b>(II) Intra-superclass dataset (<a href="#data02">samples of extracted sounds</a>)</b></li>
+        Each mixture sound in this dataset is composed of a target sound and interference sounds, the superclass of each is the same as that of the target sound, but the subclass is different.
+        <br><br>
+
+    <li><b>(III) Intra-subclass dataset (<a href="#data03">samples of extracted sounds</a>)</b></li>
+        Each mixture sound in this dataset is composed of a target sound and interference sounds, the subclass of each is the same as that of the target sound, but the onomatopoeic word is different. 
+　　</ul>
+    </p>
+    <br>
+    <br>
+    <br><br><br>
+    <p>
+    -->
+    <br><br>
+    <a name="data01"><font size="6">Examples of synthesized sounds</font></a><br><br>
+    <table border="1", align="left", style="margin-bottom:70px">
+    <tr>
+    <th>Vocal imitations</th>
+    <th>Reconsrructed sound</th>
+    <th>Label<br>(Baseline)</th>
+    <th>Label and vocal<br><font color="#0000ff">(Proposed)</font></th>
+    </tr>
+    <td></td>
+    <td></td>
+    <td class="td-css-top"><left>&nbsp;Sound event: <b>clock alarm</b></left></td>
+    <td class="td-css-top"><left>&nbsp;Sound event: <b>clock alarm</b></left></td>
+    <tr>
+    <td colspan="1">
+        <img src="./image/vocal_clock_alarm.png" class="img01">
+    </td>
+    <td colspan="1">
+        <img src="./image/reconst_clock_alarm.png" class="img01">
+    </td>
+    <td colspan="1">
+        <img src="./image/conv_clock_alarm.png" class="img01">
+    </td>
+    <td colspan="1">
+        <img src="./image/prop_clock_alaram.png" class="img01">
+    </td>
+    </tr>
+
+    <tr>
+    <td class="td-css-top">
+    <audio controls="">
+    <source src="./sound/vocal_imitation/5-219242-B-37_006.wav" type="audio/wav">
+    Your browser does not support the audio element.
+    </audio>
+    </td>
+    <td class="td-css-top">
+    <audio controls="">
+    <source src="./sound/reconstructed/5-219242-B-37_006.wav" type="audio/wav">
+    Your browser does not support the audio element.
+    </audio>
+    </td>
+    <td class="td-css-top">
+    <audio controls="">
+    <source src="./sound/conventional/5-219242-B-37_006.wav" type="audio/wav">
+    Your browser does not support the audio element.
+　　</audio>
+    </td>
+     </td>
+    <td class="td-css-top">
+    <audio controls="">
+    <source src="./sound/proposed/5-219242-B-37_006.wav" type="audio/wav">
+    Your browser does not support the audio element.
+　　</audio>
+    </td>
+     </td>
+    </tr>
+    </table>
+
+    <br>
+    <table border="1", align="left", style="margin-bottom:70px">
+    <tr>
+    <th>Vocal imitations</th>
+    <th>Reconsrructed sound</th>
+    <th>Label<br>(Baseline)</th>
+    <th>Label and vocal<br><font color="#0000ff">(Proposed)</font></th>
+    </tr>
+    <td></td>
+    <td></td>
+    <td class="td-css-top"><left>&nbsp;Sound event: <b>clock tick</b></left></td>
+    <td class="td-css-top"><left>&nbsp;Sound event: <b>clock tick</b></left></td>
+    <tr>
+    <td colspan="1">
+        <img src="./image/vocal_clock_tick.png" class="img01">
+    </td>
+    <td colspan="1">
+        <img src="./image/reconst_clock_tick.png" class="img01">
+    </td>
+    <td colspan="1">
+        <img src="./image/conv_clock_tick.png" class="img01">
+    </td>
+    <td colspan="1">
+        <img src="./image/prop_clock_tick.png" class="img01">
+    </td>
+    </tr>
+
+    <tr>
+    <td class="td-css-top">
+    <audio controls="">
+    <source src="./sound/vocal_imitation/3-170377-A-38_006.wav" type="audio/wav">
+    Your browser does not support the audio element.
+    </audio>
+    </td>
+    <td class="td-css-top">
+    <audio controls="">
+    <source src="./sound/reconstructed/3-170377-A-38_006.wav" type="audio/wav">
+    Your browser does not support the audio element.
+    </audio>
+    </td>
+    <td class="td-css-top">
+    <audio controls="">
+    <source src="./sound/conventional/3-170377-A-38_006.wav" type="audio/wav">
+    Your browser does not support the audio element.
+　　</audio>
+    </td>
+    <td class="td-css-top">
+    <audio controls="">
+    <source src="./sound/proposed/3-170377-A-38_006.wav" type="audio/wav">
+    Your browser does not support the audio element.
+　　</audio>
+    </td>
+     </td>
+     </td>
+    </tr>
+    </table>
+
+    <br>
+    <table border="1", align="left", style="margin-bottom:70px">
+    <tr>
+    <th>Vocal imitations</th>
+    <th>Reconsrructed sound</th>
+    <th>Label<br>(Baseline)</th>
+    <th>Label and vocal<br><font color="#0000ff">(Proposed)</font></th>
+    </tr>
+    <td></td>
+    <td></td>
+    <td class="td-css-top"><left>&nbsp;Sound event: <b>rooster</b></left></td>
+    <td class="td-css-top"><left>&nbsp;Sound event: <b>rooster</b></left></td>
+    <tr>
+    <td colspan="1">
+        <img src="./image/vocal_cat.png" class="img01">
+    </td>
+    <td colspan="1">
+        <img src="./image/reconst_cat.png" class="img01">
+    </td>
+    <td colspan="1">
+        <img src="./image/conv_cat.png" class="img01">
+    </td>
+    <td colspan="1">
+        <img src="./image/prop_cat.png" class="img01">
+    </td>
+    </tr>
+
+    <tr>
+    <td class="td-css-top">
+    <audio controls="">
+    <source src="./sound/vocal_imitation/3-145382-A-1_006.wav" type="audio/wav">
+    Your browser does not support the audio element.
+    </audio>
+    </td>
+    <td class="td-css-top">
+    <audio controls="">
+    <source src="./sound/reconstructed/3-145382-A-1_006.wav" type="audio/wav">
+    Your browser does not support the audio element.
+    </audio>
+    </td>
+    <td class="td-css-top">
+    <audio controls="">
+    <source src="./sound/conventional/3-145382-A-1_006.wav" type="audio/wav">
+    Your browser does not support the audio element.
+　　</audio>
+    </td>
+    <td class="td-css-top">
+    <audio controls="">
+    <source src="./sound/proposed/3-145382-A-1_006.wav" type="audio/wav">
+    Your browser does not support the audio element.
+　　</audio>
+    </td>
+     </td>
+
+     </td>
+    </tr>
+    </table>
+
+    <br>
+    <table border="1", align="left", style="margin-bottom:70px">
+    <tr>
+    <th>Vocal imitations</th>
+    <th>Reconsrructed sound</th>
+    <th>Label<br>(Baseline)</th>
+    <th>Label and vocal<br><font color="#0000ff">(Proposed)</font></th>
+    </tr>
+    <td></td>
+    <td></td>
+    <td class="td-css-top"><left>&nbsp;Sound event: <b>cat</b></left></td>
+    <td class="td-css-top"><left>&nbsp;Sound event: <b>cat</b></left></td>
+    <tr>
+    <td colspan="1">
+        <img src="./image/vocal_rooster.png" class="img01">
+    </td>
+    <td colspan="1">
+        <img src="./image/reconst_rooster.png" class="img01">
+    </td>
+    <td colspan="1">
+        <img src="./image/conv_rooster.png" class="img01">
+    </td>
+    <td colspan="1">
+        <img src="./image/prop_rooster.png" class="img01">
+    </tr>
+
+    <tr>
+    <td class="td-css-top">
+    <audio controls="">
+    <source src="./sound/vocal_imitation/3-95697-A-5_006.wav" type="audio/wav">
+    Your browser does not support the audio element.
+    </audio>
+    </td>
+    <td class="td-css-top">
+    <audio controls="">
+    <source src="./sound/reconstructed/3-95697-A-5_006.wav" type="audio/wav">
+    Your browser does not support the audio element.
+    </audio>
+    </td>
+    <td class="td-css-top">
+    <audio controls="">
+    <source src="./sound/conventional/3-95697-A-5_006.wav" type="audio/wav">
+    Your browser does not support the audio element.
+　　</audio>
+    </td>
+    <td class="td-css-top">
+    <audio controls="">
+    <source src="./sound/proposed/3-95697-A-5_006.wav" type="audio/wav">
+    Your browser does not support the audio element.
+　　</audio>
+    </td>
+     </td>
+     </td>
+    </tr>
+    </table>
+
+    <p>
+    <br>
+    <br>
+    <!--
+    [1] S. Nakamura, K. Hiyane, F. Asano, and T. Endo, “Sound scene data collection in real acoustic environments,” The Journal of the Acoustic Society of Japan (E), vol. 20, No. 3, pp. 225–231, 1999.<br>
+    [2] Yuki Okamoto, Keisuke Imoto, Shinnosuke Takamichi, Ryosuke Yamanishi, Takahiro Fukumori, and Yoichi Yamashita, "RWCP-SSD-Onomatopoeia: Onomatopoeic Word Dataset for Environmental Sound Synthesis," Proc. Detection and Classification of Acoustic Scenes and Events (DCASE), pp. 125-129, 2020.
+-->
+    </p>
+    </left>
+ 
+
+
+</BODY>
+</HTML>
+
